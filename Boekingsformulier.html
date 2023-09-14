@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Reisformulier</title>
+    <link rel="stylesheet" href="opmaak.css">
+  </head>
+<body>
+    <div class=" home">
+    <form action="#" method="post">
+    
+    <h1>Reisformulier</h1>
+     <p> voer je gegevens in om een ticket te boeken </p>
+         <!--avhternaam met regex geen cijfer-->
+     <form action="verwerk_formulier.php" method="POST">
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam"  pattern="[A-Za-z]+"
+        title="Alleen letters toegestaan" required><br>
+
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" name="achternaam"  pattern="[A-Za-z]+" 
+        title="Alleen letters toegestaan" required><br>
+
+        <label for="geslacht">Geslacht:</label>
+        <select name="geslacht">
+            <option value="man" selected>Man</option>
+            <option value="vrouw">Vrouw</option>
+            <option value="anders">Anders</option>
+        </select><br>
+
+        <label for="straat_huisnummer">Straat met huisnummer:</label>
+        <input type="text" name="straat_huisnummer" required><br>
+
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" required><br>
+
+        <label for="stad">Stad:</label>
+        <input type="text" name="stad" required><br>
+
+        <label for="land">Land:</label>
+        <input type="text" name="land" required><br>
+
+        <label for="bsn">BSN-nummer:</label>
+        <input type="text" name="bsn" required maxlength="9" pattern="[0-9]+" 
+        title="Maximaal 9 cijfers toegestaan"><br>
+
+        <label for="vakantieland">Vakantieland:</label>
+        <select name="vakantieland">
+            <option value="Nederland">Nederland</option>
+            <option value="china">Frankrijk</option>
+            <option value="Spanje">Spanje</option>
+            <option value="Duitsland">Duitsland</option>
+            <option value="Italië">Italië</option>
+        </select><br>
+
+        <label for="vertrekdatum">Datum van vertrek:</label>
+        <input type="date" id="inputdate" name="inputdate"> <br>
+
+        <label for="terugkomstdatum">Datum van terugkomst:</label>
+        <input type="date" name="terugkomstdatum" required><br>
+
+        <label for="aantal_reisgenoten">Aantal reisgenoten (max 4):</label>
+        <input type="number" name="aantal_reisgenoten" required min="0" max="4"><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="wachtwoord">Wachtwoord (om account aan te maken):</label>
+        <input type="password" name="wachtwoord" required><br>
+
+        <input type="submit" value="Boek nu"> <br>
+         </form>
+        </div>
+        <style>
+          .home {
+            display: block;
+            padding:5px;
+            border:1px solid gray;
+            width: 50%;
+            border-radius: 8px;
+          }
+
+        </style>
+        
+        <br>
+
+        <img src="Screenshot (80).png" style="width: auto;height:auto ;"  alt="foto vliegtuig">
+        
+        </body>
+     </html>
